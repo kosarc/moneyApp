@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Signup from "./pages/signup/Signup";
+import { AuthContextProvider } from "../src/App";
 
 function App() {
   return (
