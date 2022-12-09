@@ -23,7 +23,7 @@ export const useSignup = () => {
           updateProfile(auth.currentUser, { displayName });
           setIsPending(false);
           setError(null);
-          console.log("user signup:", res.user);
+
           res.user.displayName = { displayName };
           dispatch({ type: "LOGIN", payload: res.user });
         }
@@ -31,7 +31,6 @@ export const useSignup = () => {
       .catch((err) => {
         setIsPending(false);
         setError(err.message);
-        console.log(err);
       });
   };
 

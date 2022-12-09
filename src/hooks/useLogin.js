@@ -19,7 +19,6 @@ export const useLogin = () => {
         } else {
           setIsPending(false);
           setError(null);
-          console.log(res.user);
           dispatch({ type: "LOGIN", payload: res.user });
         }
       })
