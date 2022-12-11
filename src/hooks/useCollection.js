@@ -23,7 +23,7 @@ export const useCollection = (col, _query, _orderBy) => {
     if (q) {
       ref = query(collection(db, col), where(...q));
     }
-    if (oB) {
+    if (oB && q) {
       ref = query(collection(db, col), where(...q), orderBy(...oB));
     }
 

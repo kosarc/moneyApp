@@ -6,11 +6,10 @@ import TransactionList from "./TransactionList";
 
 const Home = () => {
   const { user } = useAuthContext();
-  const { document, error } = useCollection(
-    "transaction",
-    ["uid", "==", user.uid],
-    ["createdAt", "desc"]
-  );
+  const { document, error } = useCollection("transaction", null, [
+    "createdAt",
+    "desc",
+  ]);
   return (
     <div className={styles.container}>
       <div className={styles.content}>
